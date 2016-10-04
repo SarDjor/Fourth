@@ -3,9 +3,6 @@
 #include "Something.h"
 #include "ContainerClass.h"
 
-
-
-
 class Vehicle : public Something {
 protected:
 	int weight;
@@ -16,14 +13,15 @@ public:
 	Vehicle();
 	
 
-	
+	bool checkage(Driver*) const;   //check nested field
+	bool checkname(char[20]);
+
 	virtual void toConsole();
 	virtual void setw(int);
 	void simplemethod();
 	void setclassname(char[20]);
-	bool checkage(Driver*) const;   //check nested field
 	void constcast() const;         //this method change const "variable"
-	bool checkname(char[20]);
+	
 	int getdisplacement();
 	int getage();
 	int getsits();

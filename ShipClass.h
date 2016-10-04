@@ -14,6 +14,7 @@ public:
 	void showc();                                    //static field
 };
 
+
 int Ship::count = 0;
 void Ship::toConsole(){
 	std::cout << "Method show() of derivated class Ship: " << std::endl;

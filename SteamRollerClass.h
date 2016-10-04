@@ -9,6 +9,7 @@ public:
 	void toConsole();
 };
 
+
 void SteamRoller::toConsole(){
 	std::cout << "Method show() of derivated class SteamRoller: " << std::endl;
 	Vehicle::toConsole();

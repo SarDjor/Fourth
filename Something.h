@@ -1,6 +1,4 @@
 #pragma once
-//#include "ContainerClass.h"
-
 class Something{
 protected:
 	char classname[20];

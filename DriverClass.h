@@ -5,7 +5,6 @@ public:
 	Driver(int, char[20]);
 	~Driver();
 	void show();
-	//void changeWeight(Something*); // check parent field
 };
 
 
