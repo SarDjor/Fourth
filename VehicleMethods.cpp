@@ -23,14 +23,24 @@ Vehicle::Vehicle(int we,int explu, int ag, char nam[20],char clname[20],int d, i
 Vehicle::Vehicle() : Vehicle(NULL, NULL, NULL, NULL,NULL,NULL,NULL){};
 
 
-bool Vehicle::checkage(Driver* A) const {                                    //const method
-	return (A->age > 30);
-}
+//bool Vehicle::checkage(Driver* A) const {                                    //const method
+//	return (A->age > 30);
+//}
 
 bool Vehicle::checkname(char buf[20]){
 	if (strcmp(buf, classname) == 0)
 		return true;
 	return false;
+}
+
+int Vehicle::getage(){
+	return this->man->age;
+}
+int Vehicle::getdisplacement(){
+	return displacement;
+}
+int Vehicle::getsits() {
+	return countsits;
 }
 
 void Vehicle::simplemethod(){
@@ -63,21 +73,21 @@ void Vehicle::constcast() const {                                            //c
 }
 
 //----------------------------------------------------------------------------------------------------------
-Vehicle::Driver::Driver(int ag, char nam[20]){
+Something::Driver::Driver(int ag, char nam[20]){
 	Vehicle::Driver::age = ag;
 	strcpy(Vehicle::Driver::name, nam);
 	cout << "Nested class 'Driver' was created!!!" << endl;
 }
 
-void Vehicle::Driver::show(){
+void Something::Driver::show(){
 	cout << "Drivers name: " << this->name << endl;
 	cout << "Drivers age: " << this->age << endl;
 }
 
-void Vehicle::Driver::changeWeight(Vehicle* A){
-	A->weight += 200;
-	cout << "Weight of extern class was changed (+200) from nested class";
-}
+//void Vehicle::Driver::changeWeight(Vehicle* A){
+//	A->weight += 200;
+//	cout << "Weight of extern class was changed (+200) from nested class";
+//}
 //------------------------------------------------------------------------------------------------------------
 
 

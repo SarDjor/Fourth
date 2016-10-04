@@ -6,7 +6,7 @@
 
 
 
-class Vehicle:public Something {
+class Vehicle : public Something {
 protected:
 	int weight;
 	int expluatation;
@@ -16,8 +16,7 @@ public:
 	Vehicle();
 	
 
-	class Driver;
-	Driver *man;
+	
 	virtual void toConsole();
 	virtual void setw(int);
 	void simplemethod();
@@ -25,6 +24,9 @@ public:
 	bool checkage(Driver*) const;   //check nested field
 	void constcast() const;         //this method change const "variable"
 	bool checkname(char[20]);
+	int getdisplacement();
+	int getage();
+	int getsits();
 	//~Vehicle();
 };
 
